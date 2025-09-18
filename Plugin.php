@@ -10,6 +10,7 @@ use Inetis\RicheditorSnippets\Classes\SnippetParser;
 use RainLab\Pages\Controllers\Index as StaticPage;
 use Inetis\RicheditorSnippets\Classes\SnippetLoader;
 use Backend\Facades\BackendAuth;
+use Twig\Markup;
 
 /**
  * RicheditorSnippets Plugin Information File
@@ -90,7 +91,7 @@ class Plugin extends PluginBase
         return [
             'filters' => [
                 'parseSnippets' => function($html, $params = []) {
-                    return SnippetParser::parse($html, $params);
+                    return new Markup(SnippetParser::parse($html, $params), 'UTF-8');
                 }
             ]
         ];
