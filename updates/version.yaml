@@ -40,3 +40,5 @@
     - Support for basic HTML in snippet properties - Thanks @grwllrnc
 2.2.2:
     - Fix some cases where content between two snippets could be stripped
+2.2.3:
+    - Support for OctoberCMS 4.0
